@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ProductsToChooseExplore {
     GlobalVariables variables = new GlobalVariables();
     public void productsToChooseExplore(){
-        System.out.println("Which product would you like to explore?");
+        System.out.println(variables.NEXT_PRODUCT_TO_EXPLORE);
         String option1 = "1 - \uD83D\uDCFA";
         String option2 = "2 - \uD83C\uDFB9";
         System.out.println(option1);
@@ -18,7 +18,6 @@ public class ProductsToChooseExplore {
             System.out.println(variables.DESCRIPTION_TV);
         } else if (object.equals("2")) {
             System.out.println(variables.DESCRIPTION_PIANO);
-        } else System.out.println("Sorry, the product doesn't exist");
-
+        } else System.out.println(variables.PRODUCT_DOES_NOT_EXIST);
     }
 }

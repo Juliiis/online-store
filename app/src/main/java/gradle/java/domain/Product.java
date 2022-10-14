@@ -9,7 +9,7 @@ public class Product {
 
     public Product(String image, String description, String featuredAttribute, Double price, String reference){
         this.image = image;
-        this. description = description;
+        this.description = description;
         this.featuredAttribute = featuredAttribute;
         this.price = price;
         this.reference = reference;
@@ -22,7 +22,6 @@ public class Product {
     public String showDescription(){
         return description;
     }
-
     public String showFeaturedAttribute(){
         return featuredAttribute;
     }
