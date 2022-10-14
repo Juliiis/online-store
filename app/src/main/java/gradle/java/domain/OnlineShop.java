@@ -1,5 +1,7 @@
-package gradle.java;
+package gradle.java.domain;
 
+import gradle.java.infrastructure.CatalogueFormater;
+import gradle.java.infrastructure.ProductWarehouse;
 import java.util.ArrayList;
 
 public class OnlineShop {

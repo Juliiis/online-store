@@ -1,4 +1,4 @@
-package gradle.java;
+package gradle.java.infrastructure;
 
 import java.util.ArrayList;
 import java.util.Scanner;

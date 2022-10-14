@@ -1,6 +1,7 @@
 
-package gradle.java;
+package gradle.java.infrastructure;
 
+import gradle.java.domain.Product;
 import java.util.ArrayList;
 import java.util.Arrays;
 
