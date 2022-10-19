@@ -1,9 +1,14 @@
 package gradle.java.infrastructure;
 
 public class ProductFormater {
-
-  public void formatToDisplayASpecificProduct(){
-
+  ProductWarehouse productWarehouse = new ProductWarehouse();
+  public String formatToDisplayASpecificProduct(){
+      //image
+    //price
+    //reference
+    //sumary
+    //description
+    return "";
   }
 
 }
