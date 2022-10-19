@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class ProductsToChooseExplore {
     GlobalVariables globalVariables = new GlobalVariables();
+    ProductWarehouse productWarehouse = new ProductWarehouse();
     public void productsToChooseExplore(){
         System.out.println("Which product would you like to explore?");
         String option1 = "1 - \uD83D\uDCFA";
@@ -15,7 +16,7 @@ public class ProductsToChooseExplore {
         String object = myObj.nextLine();
 
         if(object.equals("1")){
-            System.out.println(globalVariables.DESCRIPTION_TV);
+            System.out.println(productWarehouse.findTheProductByReference("hola"));
         } else if (object.equals("2")) {
             System.out.println(globalVariables.DESCRIPTION_PIANO);
         } else System.out.println("Sorry, the product doesn't exist");
