@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class CatalogueFormater {
     ProductsToChooseExplore productsToChooseExplore = new ProductsToChooseExplore();
     ProductWarehouse productWarehouse = new ProductWarehouse();
+    GlobalVariables globalVariables = new GlobalVariables();
     public String format(ArrayList<Product> catalogue){
         for (Product product : catalogue){
             System.out.println(product.showImage());
@@ -24,9 +25,9 @@ public class CatalogueFormater {
 
     public void decideWhatToDoNext(){
         System.out.println("\n");
-        System.out.println("¿What would you like to do next?");
-        String nextOption1 = "1 - Add product to cart";
-        String nextOption2 = "2 - Keep browsing products";
+        System.out.println(globalVariables.DECIDE_NEXT_STEP);
+        String nextOption1 = globalVariables.OPTION_ONE;
+        String nextOption2 = globalVariables.OPTION_TWO;
         System.out.println(nextOption1);
         System.out.println(nextOption2);
 
@@ -39,7 +40,7 @@ public class CatalogueFormater {
             ArrayList<Product> catalogue = productWarehouse.findAll();
             String formattedCatalogue = format(catalogue);
             System.out.println(formattedCatalogue);
-        } else System.out.println("Sorry, you have to choose one valid option");
+        } else System.out.println(globalVariables.INVALID_OPTION);
     }
 
 }
