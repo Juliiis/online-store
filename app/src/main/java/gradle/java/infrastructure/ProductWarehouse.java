@@ -26,12 +26,14 @@ public class ProductWarehouse {
 
     public Product findTheProductByAllReference(){
         for(Product product : products){
+            if (product.equals(product)){
                 System.out.println(product.showImage());
                 System.out.println(product.showDescription());
                 System.out.println(product.showFeaturedAttribute());
                 System.out.println(product.showPrice());
                 System.out.println(product.showReference());
                 System.out.println("\n");
+            }
             return product;
         }
         throw new RuntimeException(globalVariables.PRODUCT_DOES_NOT_EXIST);
