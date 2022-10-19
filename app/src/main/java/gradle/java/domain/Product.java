@@ -1,11 +1,11 @@
 package gradle.java.domain;
 
 public class Product {
-    private final String image;
-    private final String description;
-    private final String featuredAttribute;
-    private final double price;
-    private final String reference;
+    public final String image;
+    public final String description;
+    public final String featuredAttribute;
+    public final double price;
+    public final String reference;
 
     public Product(String image, String description, String featuredAttribute, Double price, String reference){
         this.image = image;
