@@ -4,10 +4,10 @@ public class Product {
     public final String image;
     public final String description;
     public final String featuredAttribute;
-    public final double price;
+    public final String price;
     public final String reference;
 
-    public Product(String image, String description, String featuredAttribute, Double price, String reference){
+    public Product(String image, String description, String featuredAttribute, String price, String reference){
         this.image = image;
         this.description = description;
         this.featuredAttribute = featuredAttribute;
@@ -26,7 +26,7 @@ public class Product {
         return featuredAttribute;
     }
 
-    public Double showPrice(){
+    public String showPrice(){
         return price;
     }
 
