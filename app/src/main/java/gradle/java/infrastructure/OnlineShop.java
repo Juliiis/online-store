@@ -1,5 +1,6 @@
-package gradle.java.domain;
+package gradle.java.infrastructure;
 
+import gradle.java.domain.Product;
 import gradle.java.infrastructure.CatalogueFormater;
 import gradle.java.infrastructure.ProductWarehouse;
 import java.util.ArrayList;
