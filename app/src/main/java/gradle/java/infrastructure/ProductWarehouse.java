@@ -24,8 +24,9 @@ public class ProductWarehouse {
         return products;
     }
 
-    public Product findTheProductByAllReference(){
+    public Product displayASpecificProduct(){
         Scanner myObj = new Scanner(System.in);
+
         String object = myObj.nextLine();
 
         for(Product product : products){
