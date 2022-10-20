@@ -10,20 +10,28 @@ public class CatalogueFormater {
     ProductWarehouse productWarehouse = new ProductWarehouse();
     GlobalVariables globalVariables = new GlobalVariables();
     public String format(ArrayList<Product> catalogue){
+        StringBuilder formattedProduct = new StringBuilder();
         for (Product product : catalogue){
-            System.out.println(product.showImage());
-            System.out.println(product.showDescription());
-            System.out.println(product.showFeaturedAttribute());
-            System.out.println(product.showPrice());
-            System.out.println(product.showReference());
-            System.out.println("\n");
+            formattedProduct.append(product.showImage());
+            formattedProduct.append("\n");
+            formattedProduct.append(product.showDescription());
+            formattedProduct.append("\n");
+            formattedProduct.append(product.showFeaturedAttribute());
+            formattedProduct.append("\n");
+            formattedProduct.append(product.showPrice());
+            formattedProduct.append("\n");
+            formattedProduct.append(product.showReference());
+            formattedProduct.append("\n");
+            formattedProduct.append("\n");
         }
-        productsToChooseExplore.productsToChooseExplore();
-        decideWhatToDoNext();
-        return "";
+        //productsToChooseExplore.productsToChooseExplore();
+        //decideWhatToDoNext();
+        return formattedProduct.toString();
     }
 
-    public void decideWhatToDoNext(){
+
+
+   /* public void decideWhatToDoNext(){
         System.out.println("\n");
         System.out.println(globalVariables.DECIDE_NEXT_STEP);
         String nextOption1 = globalVariables.OPTION_ONE;
@@ -41,6 +49,6 @@ public class CatalogueFormater {
             String formattedCatalogue = format(catalogue);
             System.out.println(formattedCatalogue);
         } else System.out.println(globalVariables.INVALID_OPTION);
-    }
+    } */
 
 }
