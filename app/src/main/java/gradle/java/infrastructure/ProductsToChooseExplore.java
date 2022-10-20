@@ -12,7 +12,7 @@ public class ProductsToChooseExplore {
         System.out.println(option1);
         System.out.println(option2);
 
-        productWarehouse.displayASpecificProduct();
+        //productWarehouse.displayASpecificProduct();
         /*Scanner myObj = new Scanner(System.in);
         String object = myObj.nextLine();
 
