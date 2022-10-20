@@ -29,7 +29,9 @@ public class ProductWarehouse {
         return products;
     }
 
-    public Product displayASpecificProduct(){
+    public int findStockByReference(String productReference){ return 0; }
+
+   /* public Product displayASpecificProduct(){
 
         Scanner myObj = new Scanner(System.in);
         String object = myObj.nextLine();
@@ -46,6 +48,6 @@ public class ProductWarehouse {
             return product;
         }
         throw new RuntimeException(globalVariables.PRODUCT_DOES_NOT_EXIST);
-    }
+    }*/
 
 }
