@@ -12,7 +12,8 @@ public class ProductsToChooseExplore {
         System.out.println(option1);
         System.out.println(option2);
 
-        Scanner myObj = new Scanner(System.in);
+        productWarehouse.findTheProductByAllReference();
+        /*Scanner myObj = new Scanner(System.in);
         String object = myObj.nextLine();
 
         if(object.equals("1")){
@@ -20,6 +21,6 @@ public class ProductsToChooseExplore {
         } else if (object.equals("2")) {
             System.out.println(productWarehouse.findTheProductByAllReference().showReference());
         } else System.out.println(globalVariables.PRODUCT_DOES_NOT_EXIST);
-
+*/
     }
 }

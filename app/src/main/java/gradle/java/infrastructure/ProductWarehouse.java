@@ -4,6 +4,7 @@ package gradle.java.infrastructure;
 import gradle.java.domain.Product;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class ProductWarehouse {
     GlobalVariables globalVariables = new GlobalVariables();
@@ -25,8 +26,11 @@ public class ProductWarehouse {
     }
 
     public Product findTheProductByAllReference(){
+        Scanner myObj = new Scanner(System.in);
+        String object = myObj.nextLine();
+
         for(Product product : products){
-            if (product.equals(product)){
+            if (object.equals("1")){
                 System.out.println(product.showImage());
                 System.out.println(product.showDescription());
                 System.out.println(product.showFeaturedAttribute());
