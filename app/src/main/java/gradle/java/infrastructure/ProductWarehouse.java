@@ -7,18 +7,23 @@ import java.util.Scanner;
 
 public class ProductWarehouse {
     GlobalVariables globalVariables = new GlobalVariables();
+    AllProductsAttributes allProductsAttributes = new AllProductsAttributes();
     private final ArrayList<Product> products = new ArrayList<>(Arrays.asList(new Product(
-                    "\uD83D\uDCFA",
-                    "Glamorous panoramic television, 13 inches",
-                    "With this panoramic television, your friday nights will be boring no more.",
-                    "Price: 300.99 €",
-                    "Reference: W2C"),
+                    allProductsAttributes.TV_IMAGE,
+                    allProductsAttributes.TV_SHORT_DESCRIPTION,
+                    allProductsAttributes.TV_HIGHLIGHTED_ATTRIBUTE,
+                    allProductsAttributes.TV_LONG_DESCRIPTION,
+                    allProductsAttributes.TV_PRICE,
+                    allProductsAttributes.TV_REFERENCE,
+                    allProductsAttributes.TV_STOCK),
             new Product(
-                    "\uD83C\uDFB9",
-                    "Untuned musical keyboard, 4 octaves",
-                    "Tired of your noisy neighbourgh? Play this untuned musical keyboard for two hours at home and your neighbour will be ready to move to a building far away from you.",
-                    "Price: 1003.00 €",
-                    "Reference: X4A")));
+                    allProductsAttributes.PIANO_IMAGE,
+                    allProductsAttributes.PIANO_SHORT_DESCRIPTION,
+                    allProductsAttributes.PIANO_HIGHLIGHTED_ATTRIBUTE,
+                    allProductsAttributes.PIANO_LONG_DESCRIPTION,
+                    allProductsAttributes.PIANO_PRICE,
+                    allProductsAttributes.PIANO_REFERENCE,
+                    allProductsAttributes.PIANO_STOCK)));
 
     public ArrayList<Product> findAll() {
         return products;
