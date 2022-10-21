@@ -1,13 +1,28 @@
 package gradle.java.infrastructure;
 
-import gradle.java.domain.Product;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DecideNextSteps {
   GlobalVariables globalVariables = new GlobalVariables();
   ProductWarehouse productWarehouse = new ProductWarehouse();
-  CatalogueFormatter catalogueFormatter = new CatalogueFormatter();
+
+  public void decideProductsToExplore(){
+    System.out.println(globalVariables.NEXT_PRODUCT_TO_EXPLORE);
+    String option1 = "\uD83D\uDCFA Reference: W2C";
+    String option2 = "\uD83C\uDFB9 Reference: X4A";
+    System.out.println(option1);
+    System.out.println(option2);
+
+    Scanner myObj = new Scanner(System.in);
+    String object = myObj.nextLine();
+
+    if(object.equals("W2C")){
+
+;   } else if (object.equals("X4A")) {
+       System.out.println("QUE TAL");
+    } else System.out.println(globalVariables.PRODUCT_DOES_NOT_EXIST);
+
+  }
 
   public void decideWhatToDoNext(){
     System.out.println("\n");
@@ -20,53 +35,12 @@ public class DecideNextSteps {
     Scanner myObj = new Scanner(System.in);
     String opcionChoosed = myObj.nextLine();
 
-    /*
     if(opcionChoosed.equals("1")){
       System.out.println();
     } else if (opcionChoosed.equals("2")) {
-      ArrayList<Product> catalogue = productWarehouse.findAll();
-      String formattedCatalogue = catalogueFormatter.format(catalogue);
-      System.out.println(formattedCatalogue);
+      System.out.println();
     } else System.out.println(globalVariables.INVALID_OPTION);
 
-    */
   }
 
-  public void decideProductsToExplore(){
-    System.out.println(globalVariables.NEXT_PRODUCT_TO_EXPLORE);
-    String option1 = "1 - \uD83D\uDCFA";
-    String option2 = "2 - \uD83C\uDFB9";
-    System.out.println(option1);
-    System.out.println(option2);
-
-    //productWarehouse.displayASpecificProduct();
-        /*Scanner myObj = new Scanner(System.in);
-        String object = myObj.nextLine();
-
-        if(object.equals("1")){
-            System.out.println(productWarehouse.findTheProductByAllReference().showReference());
-        } else if (object.equals("2")) {
-            System.out.println(productWarehouse.findTheProductByAllReference().showReference());
-        } else System.out.println(globalVariables.PRODUCT_DOES_NOT_EXIST);
-*/
-  }
-
- /* public Product decideShowASpecificProduct(){
-
-    Scanner myObj = new Scanner(System.in);
-    String object = myObj.nextLine();
-
-    for(Product product : products){
-      if (object.equals("1")){
-        System.out.println(product.showImage());
-        System.out.println(product.showPrice());
-        System.out.println(product.showReference());
-        System.out.println(product.showDescription());
-        System.out.println(product.showFeaturedAttribute());
-        System.out.println("\n");
-      }
-      return product;
-    }
-    throw new RuntimeException(globalVariables.PRODUCT_DOES_NOT_EXIST);
-  }*/
 }
