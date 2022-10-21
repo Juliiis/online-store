@@ -23,5 +23,23 @@ public class CatalogueFormatter {
         return formattedProduct.toString();
     }
 
+    public String formatProductByReference(ArrayList<Product> catalogue){
+        StringBuilder formattedProduct = new StringBuilder();
+        for (Product product : catalogue){
+            formattedProduct.append(product.showImage());
+            formattedProduct.append("\n");
+            formattedProduct.append(product.showPrice());
+            formattedProduct.append("\n");
+            formattedProduct.append(product.showReference());
+            formattedProduct.append("\n");
+            formattedProduct.append(product.showShortDescription() + " " + product.showHighLightedAttribute());
+            formattedProduct.append("\n");
+            formattedProduct.append(product.showLongDescription());
+            formattedProduct.append("\n");
+            formattedProduct.append("\n");
+        }
+        return formattedProduct.toString();
+    }
+
 
 }
