@@ -3,12 +3,15 @@
  */
 package gradle.java;
 
+import gradle.java.infrastructure.DecideNextSteps;
 import gradle.java.infrastructure.OnlineShop;
 
 public class App {
     public static void main(String[] args) {
         OnlineShop onlineShop = new OnlineShop();
+        DecideNextSteps decideNextSteps = new DecideNextSteps();
         onlineShop.showProducts();
+        decideNextSteps.decideProductsToExplore();
         onlineShop.showProductByReference();
     }
 }

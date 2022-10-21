@@ -1,27 +1,14 @@
 package gradle.java.infrastructure;
 
+import gradle.java.domain.Product;
 import java.util.Scanner;
 
 public class DecideNextSteps {
   GlobalVariables globalVariables = new GlobalVariables();
-  ProductWarehouse productWarehouse = new ProductWarehouse();
+  OnlineShop onlineShop = new OnlineShop();
 
   public void decideProductsToExplore(){
     System.out.println(globalVariables.NEXT_PRODUCT_TO_EXPLORE);
-    String option1 = "\uD83D\uDCFA Reference: W2C";
-    String option2 = "\uD83C\uDFB9 Reference: X4A";
-    System.out.println(option1);
-    System.out.println(option2);
-
-    Scanner myObj = new Scanner(System.in);
-    String object = myObj.nextLine();
-
-    if(object.equals("W2C")){
-
-;   } else if (object.equals("X4A")) {
-       System.out.println("QUE TAL");
-    } else System.out.println(globalVariables.PRODUCT_DOES_NOT_EXIST);
-
   }
 
   public void decideWhatToDoNext(){
