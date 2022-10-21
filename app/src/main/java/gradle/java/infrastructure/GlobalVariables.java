@@ -5,7 +5,6 @@ public class GlobalVariables {
   String NEXT_PRODUCT_TO_EXPLORE = "Which product would you like to explore?";
   String OPTION_ONE = "1 - Add product to cart";
   String OPTION_TWO = "2 - Keep browsing products";
-  String PRODUCT_DOES_NOT_EXIST = "Sorry, the product doesn't exist";
   String INVALID_OPTION = "Sorry, you have to choose one valid option";
 }
 
