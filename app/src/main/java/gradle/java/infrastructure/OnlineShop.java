@@ -2,7 +2,6 @@ package gradle.java.infrastructure;
 
 import gradle.java.domain.Product;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class OnlineShop {
     private final ProductWarehouse productWarehouse = new ProductWarehouse();
