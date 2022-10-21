@@ -1,6 +1,5 @@
 package gradle.java.infrastructure;
 
-
 import gradle.java.domain.Product;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -21,6 +20,7 @@ public class DecideNextSteps {
     Scanner myObj = new Scanner(System.in);
     String opcionChoosed = myObj.nextLine();
 
+    /*
     if(opcionChoosed.equals("1")){
       System.out.println();
     } else if (opcionChoosed.equals("2")) {
@@ -28,6 +28,8 @@ public class DecideNextSteps {
       String formattedCatalogue = catalogueFormatter.format(catalogue);
       System.out.println(formattedCatalogue);
     } else System.out.println(globalVariables.INVALID_OPTION);
+
+    */
   }
 
   public void decideProductsToExplore(){

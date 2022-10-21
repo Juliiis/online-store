@@ -6,11 +6,13 @@ import java.util.ArrayList;
 public class OnlineShop {
     private CatalogueFormatter catalogueFormater = new CatalogueFormatter();
     private final ProductWarehouse productWarehouse = new ProductWarehouse();
+    DecideNextSteps decideNextSteps = new DecideNextSteps();
 
     public void showProducts() {
 
         ArrayList<Product> catalogue = productWarehouse.findAll();
         String formattedCatalogue = catalogueFormater.format(catalogue);
         System.out.println(formattedCatalogue);
+        decideNextSteps.decideWhatToDoNext();
     }
 }
