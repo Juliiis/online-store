@@ -12,7 +12,7 @@ public class OnlineShop {
         printCatalogueFormatter.printCatalogue(catalogue);
     }
     public void showProductByReference(){
-        String inputClient = scannerInput.getInputFromUser();
+        String inputClient = scannerInput.getInputFromUserInShowProductByReference();
         Product product = productWarehouse.findProductByReference(inputClient);
         printCatalogueFormatter.printByReference(product);
     }
