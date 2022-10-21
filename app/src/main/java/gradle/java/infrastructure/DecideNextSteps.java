@@ -1,7 +1,6 @@
 package gradle.java.infrastructure;
 
 import gradle.java.domain.Product;
-import java.util.Scanner;
 
 public class DecideNextSteps {
   GlobalVariables globalVariables = new GlobalVariables();
