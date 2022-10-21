@@ -4,7 +4,7 @@ import gradle.java.domain.Product;
 import java.util.ArrayList;
 
 
-public class CatalogueFormater {
+public class CatalogueFormatter {
     public String format(ArrayList<Product> catalogue){
         StringBuilder formattedProduct = new StringBuilder();
         for (Product product : catalogue){
