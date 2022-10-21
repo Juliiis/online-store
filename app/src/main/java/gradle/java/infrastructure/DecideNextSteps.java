@@ -1,13 +1,13 @@
 package gradle.java.infrastructure;
 
 import gradle.java.domain.Product;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DecideNextSteps {
   GlobalVariables globalVariables = new GlobalVariables();
   OnlineShop onlineShop = new OnlineShop();
-
+  ProductWarehouse productWarehouse = new ProductWarehouse();
+  PrintCatalogueFormatter printCatalogueFormatter = new PrintCatalogueFormatter();
   public void decideProductsToExplore(){
     System.out.println(globalVariables.NEXT_PRODUCT_TO_EXPLORE);
     System.out.println(globalVariables.PRODUCT_REFERENCE);
@@ -27,6 +27,15 @@ public class DecideNextSteps {
       System.out.println();
     } else if (opcionChoosed.equals(globalVariables.NUMBER_TWO)) {
       onlineShop.showProducts();
+      decideProductsToExplore();
+
+      Scanner object = new Scanner(System.in);
+      String test = object.nextLine();
+
+      Product product = productWarehouse.findProductByReference(test);
+      printCatalogueFormatter.printByReference(product);
+      decideWhatToDoNext();
+
     } else System.out.println(globalVariables.INVALID_OPTION);
 
   }
