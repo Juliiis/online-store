@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 public class ProductWarehouse {
     AllProductsAttributes allProductsAttributes = new AllProductsAttributes();
+    GlobalVariables globalVariables = new GlobalVariables();
     private final ArrayList<Product> products = new ArrayList<>(Arrays.asList(new Product(
                     allProductsAttributes.TV_IMAGE,
                     allProductsAttributes.TV_SHORT_DESCRIPTION,
@@ -25,6 +26,14 @@ public class ProductWarehouse {
         return products;
     }
 
-    public int findStockByReference(String productReference){ return 0; }
+    public Product findProductByReference(String productReference){
+        for (Product product : products) {
+            if (product.reference.equals(productReference)) {
+                return product;
+            }
+        }
+        throw new RuntimeException(globalVariables.PRODUCT_DOES_NOT_EXIST);
+
+    }
 
 }
