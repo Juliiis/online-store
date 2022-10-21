@@ -14,16 +14,14 @@ public class ProductWarehouse {
                     allProductsAttributes.TV_HIGHLIGHTED_ATTRIBUTE,
                     allProductsAttributes.TV_LONG_DESCRIPTION,
                     allProductsAttributes.TV_PRICE,
-                    allProductsAttributes.TV_REFERENCE,
-                    allProductsAttributes.TV_STOCK),
+                    allProductsAttributes.TV_REFERENCE),
             new Product(
                     allProductsAttributes.PIANO_IMAGE,
                     allProductsAttributes.PIANO_SHORT_DESCRIPTION,
                     allProductsAttributes.PIANO_HIGHLIGHTED_ATTRIBUTE,
                     allProductsAttributes.PIANO_LONG_DESCRIPTION,
                     allProductsAttributes.PIANO_PRICE,
-                    allProductsAttributes.PIANO_REFERENCE,
-                    allProductsAttributes.PIANO_STOCK)));
+                    allProductsAttributes.PIANO_REFERENCE)));
 
     public ArrayList<Product> findAll() {
         return products;
