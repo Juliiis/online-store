@@ -2,16 +2,16 @@ package gradle.java.domain;
 
 public class Product {
     public final String image;
-    public final String description;
-    public final String featuredAttribute;
+    public final String shortDescription;
+    public final String highlightedAttribute;
     public final String longDescription;
     public final Double price;
     public final String reference;
 
-    public Product(String image, String description, String featuredAttribute, String longDescription, Double price, String reference){
+    public Product(String image, String shortDescription, String highlightedAttribute, String longDescription, Double price, String reference){
         this.image = image;
-        this.description = description;
-        this.featuredAttribute = featuredAttribute;
+        this.shortDescription = shortDescription;
+        this.highlightedAttribute = highlightedAttribute;
         this.longDescription = longDescription;
         this.price = price;
         this.reference = reference;
@@ -21,11 +21,11 @@ public class Product {
         return image;
     }
 
-    public String showDescription(){
-        return description;
+    public String showShortDescription(){
+        return shortDescription;
     }
-    public String showFeaturedAttribute(){
-        return featuredAttribute;
+    public String showHighLightedAttribute(){
+        return highlightedAttribute;
     }
     public String showLongDescription() { return longDescription; }
 

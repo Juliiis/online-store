@@ -10,9 +10,9 @@ public class CatalogueFormatter {
         for (Product product : catalogue){
             formattedProduct.append(product.showImage());
             formattedProduct.append("\n");
-            formattedProduct.append(product.showDescription());
+            formattedProduct.append(product.showShortDescription());
             formattedProduct.append("\n");
-            formattedProduct.append(product.showFeaturedAttribute());
+            formattedProduct.append(product.showLongDescription() + product.showHighLightedAttribute());
             formattedProduct.append("\n");
             formattedProduct.append(product.showPrice());
             formattedProduct.append("\n");
