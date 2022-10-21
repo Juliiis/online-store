@@ -21,11 +21,11 @@ public class DecideNextSteps {
     System.out.println(nextOption2);
 
     Scanner myObj = new Scanner(System.in);
-    String opcionChoosed = myObj.nextLine();
+    String optionChosen = myObj.nextLine();
 
-    if(opcionChoosed.equals(globalVariables.NUMBER_ONE)){
+    if(optionChosen.equals(globalVariables.NUMBER_ONE)){
       System.out.println();
-    } else if (opcionChoosed.equals(globalVariables.NUMBER_TWO)) {
+    } else if (optionChosen.equals(globalVariables.NUMBER_TWO)) {
       onlineShop.showProducts();
       decideProductsToExplore();
 
