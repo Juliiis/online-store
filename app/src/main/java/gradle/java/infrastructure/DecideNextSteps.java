@@ -48,4 +48,23 @@ public class DecideNextSteps {
         } else System.out.println(globalVariables.PRODUCT_DOES_NOT_EXIST);
 */
   }
+
+ /* public Product decideShowASpecificProduct(){
+
+    Scanner myObj = new Scanner(System.in);
+    String object = myObj.nextLine();
+
+    for(Product product : products){
+      if (object.equals("1")){
+        System.out.println(product.showImage());
+        System.out.println(product.showPrice());
+        System.out.println(product.showReference());
+        System.out.println(product.showDescription());
+        System.out.println(product.showFeaturedAttribute());
+        System.out.println("\n");
+      }
+      return product;
+    }
+    throw new RuntimeException(globalVariables.PRODUCT_DOES_NOT_EXIST);
+  }*/
 }
