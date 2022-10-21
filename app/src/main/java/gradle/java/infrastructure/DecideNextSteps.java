@@ -8,6 +8,7 @@ public class DecideNextSteps {
   OnlineShop onlineShop = new OnlineShop();
   ProductWarehouse productWarehouse = new ProductWarehouse();
   PrintCatalogueFormatter printCatalogueFormatter = new PrintCatalogueFormatter();
+  ScannerInput scannerInput = new ScannerInput();
   public void decideProductsToExplore(){
     System.out.println(globalVariables.NEXT_PRODUCT_TO_EXPLORE);
     System.out.println(globalVariables.PRODUCT_REFERENCE);
@@ -29,10 +30,9 @@ public class DecideNextSteps {
       onlineShop.showProducts();
       decideProductsToExplore();
 
-      Scanner object = new Scanner(System.in);
-      String test = object.nextLine();
+      String inputClient = scannerInput.getInputFromUser();
 
-      Product product = productWarehouse.findProductByReference(test);
+      Product product = productWarehouse.findProductByReference(inputClient);
       printCatalogueFormatter.printByReference(product);
       decideWhatToDoNext();
 
