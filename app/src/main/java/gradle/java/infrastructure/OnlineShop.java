@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class OnlineShop {
     private final ProductWarehouse productWarehouse = new ProductWarehouse();
-    Print print = new Print();
+    PrintCatalogueFormatter print = new PrintCatalogueFormatter();
     public void showProducts() {
         ArrayList<Product> catalogue = productWarehouse.findAll();
         print.printCatalogue(catalogue);

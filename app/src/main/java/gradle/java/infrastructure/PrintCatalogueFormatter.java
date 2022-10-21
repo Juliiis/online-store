@@ -3,7 +3,7 @@ package gradle.java.infrastructure;
 import gradle.java.domain.Product;
 import java.util.ArrayList;
 
-public class Print {
+public class PrintCatalogueFormatter {
   CatalogueFormatter catalogueFormatter = new CatalogueFormatter();
 
   public void printCatalogue(ArrayList<Product> catalogue){
