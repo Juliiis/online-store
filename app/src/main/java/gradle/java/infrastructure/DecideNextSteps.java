@@ -1,6 +1,7 @@
 package gradle.java.infrastructure;
 
 import gradle.java.domain.Product;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DecideNextSteps {
@@ -9,10 +10,10 @@ public class DecideNextSteps {
 
   public void decideProductsToExplore(){
     System.out.println(globalVariables.NEXT_PRODUCT_TO_EXPLORE);
+    System.out.println(globalVariables.PRODUCT_REFERENCE);
   }
 
   public void decideWhatToDoNext(){
-    System.out.println("\n");
     System.out.println(globalVariables.DECIDE_NEXT_STEP);
     String nextOption1 = globalVariables.OPTION_ONE;
     String nextOption2 = globalVariables.OPTION_TWO;
@@ -22,10 +23,10 @@ public class DecideNextSteps {
     Scanner myObj = new Scanner(System.in);
     String opcionChoosed = myObj.nextLine();
 
-    if(opcionChoosed.equals("1")){
+    if(opcionChoosed.equals(globalVariables.NUMBER_ONE)){
       System.out.println();
-    } else if (opcionChoosed.equals("2")) {
-      System.out.println();
+    } else if (opcionChoosed.equals(globalVariables.NUMBER_TWO)) {
+      onlineShop.showProducts();
     } else System.out.println(globalVariables.INVALID_OPTION);
 
   }

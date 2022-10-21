@@ -13,5 +13,6 @@ public class App {
         onlineShop.showProducts();
         decideNextSteps.decideProductsToExplore();
         onlineShop.showProductByReference();
+        decideNextSteps.decideWhatToDoNext();
     }
 }
