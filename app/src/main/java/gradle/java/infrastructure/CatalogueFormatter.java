@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 
 public class CatalogueFormatter {
-    public String format(ArrayList<Product> catalogue){
+    public String formatProductCatalogue(ArrayList<Product> catalogue){
         StringBuilder formattedProduct = new StringBuilder();
         for (Product product : catalogue){
             formattedProduct.append(product.showImage());
