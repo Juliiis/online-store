@@ -28,7 +28,7 @@ public class ProductWarehouse {
 
     public Product findProductByReference(String productReference){
         for (Product product : products) {
-            if (product.reference.equals(productReference)) {
+            if (product.reference.contains(productReference)) {
                 return product;
             }
         }
