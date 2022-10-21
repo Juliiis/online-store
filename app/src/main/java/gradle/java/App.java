@@ -3,7 +3,7 @@
  */
 package gradle.java;
 
-import gradle.java.domain.OnlineShop;
+import gradle.java.infrastructure.OnlineShop;
 
 public class App {
     public static void main(String[] args) {
