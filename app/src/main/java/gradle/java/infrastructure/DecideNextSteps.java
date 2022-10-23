@@ -10,18 +10,18 @@ public class DecideNextSteps {
   ScannerInput scannerInput = new ScannerInput();
   Println println = new Println();
   public void decideProductsToExplore(){
-    println.printlnDecideProductsToExplore();
+      println.printlnDecideProductsToExplore();
   }
 
   public void decideWhatToDoNext(){
     println.printlnDecideStepWhatToDoNext();
     println.printlnChooseOptionWhatToDoNext();
 
-    String inputClientOne = scannerInput.getInputFromUser();
+    String inputClient = scannerInput.getInputFromUser();
 
-    if(inputClientOne.equals(globalVariables.NUMBER_ONE)){
+    if(inputClient.equals(globalVariables.NUMBER_ONE)){
       System.out.println();
-    } else if (inputClientOne.equals(globalVariables.NUMBER_TWO)) {
+    } else if (inputClient.equals(globalVariables.NUMBER_TWO)) {
       onlineShop.showProducts();
       decideProductsToExplore();
       String inputClientTwo = scannerInput.getInputFromUser();
