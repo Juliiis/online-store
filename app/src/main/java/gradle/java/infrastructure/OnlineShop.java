@@ -9,12 +9,12 @@ public class OnlineShop {
     ScannerInput scannerInput = new ScannerInput();
     public void showProducts() {
         ArrayList<Product> catalogue = productWarehouse.findAll();
-        printCatalogueFormatter.printCatalogue(catalogue);
+        printCatalogueFormatter.printCatalogueAllProducts(catalogue);
     }
     public void showProductByReference(){
         String inputClient = scannerInput.getInputFromUser();
         Product product = productWarehouse.findProductByReference(inputClient);
-        printCatalogueFormatter.printByReference(product);
+        printCatalogueFormatter.printOneProductByReference(product);
     }
 
 }

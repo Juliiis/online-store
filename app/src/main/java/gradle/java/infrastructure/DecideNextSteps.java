@@ -26,11 +26,10 @@ public class DecideNextSteps {
       decideProductsToExplore();
       String inputClientTwo = scannerInput.getInputFromUser();
       Product product = productWarehouse.findProductByReference(inputClientTwo);
-      printCatalogueFormatter.printByReference(product);
+      printCatalogueFormatter.printOneProductByReference(product);
       decideWhatToDoNext();
 
-    } else System.out.println(globalVariables.INVALID_OPTION);
-
+    } else System.out.println(globalVariables.PRODUCT_DOES_NOT_EXIST);
   }
 
 }
