@@ -14,4 +14,5 @@ public class AllProductsAttributes {
   public static final String PIANO_LONG_DESCRIPTION = "Tired of your noisy neighbour? Play this off-key musical keyboard for two hours at home and your neighbour will be ready to move to a building far away from you.";
   public static final double PIANO_PRICE = 1003.00;
   public static final String PIANO_REFERENCE = "Reference: X4A";
+
 }
