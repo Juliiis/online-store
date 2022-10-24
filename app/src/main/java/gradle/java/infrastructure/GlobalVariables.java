@@ -8,7 +8,6 @@ public class GlobalVariables {
   String PRODUCT_REFERENCE = "Please, add the reference of the product";
   String OPTION_ONE = "1 - Add product to cart";
   String OPTION_TWO = "2 - Keep browsing products";
-  String INVALID_OPTION = "Sorry, you have to choose one valid option";
   String PRODUCT_DOES_NOT_EXIST = "Sorry the product doesnt exist. Please insert a valid Reference";
 }
 
