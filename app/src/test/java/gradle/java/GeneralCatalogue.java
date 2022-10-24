@@ -19,4 +19,11 @@ public class GeneralCatalogue {
     "Reference: X4A")
   ));
 
+  public static Product OneProduct = new Product("\uD83D\uDCFA",
+    "Glamorous panoramic television,",
+    "13 inches",
+    "With this panoramic television, your friday nights will be boring no more",
+    300.99,
+    "Reference: W2C");
+
 }
