@@ -5,10 +5,16 @@ package gradle.java;
 
 import gradle.java.infrastructure.DecideNextSteps;
 import gradle.java.infrastructure.OnlineShop;
+import gradle.java.infrastructure.PrintCatalogueFormatter;
+import gradle.java.infrastructure.ProductWarehouse;
+import gradle.java.infrastructure.ScannerInput;
 
 public class App {
     public static void main(String[] args) {
-        OnlineShop onlineShop = new OnlineShop();
+        ProductWarehouse productWarehouse = new ProductWarehouse();
+        PrintCatalogueFormatter printCatalogueFormatter = new PrintCatalogueFormatter();
+        ScannerInput scannerInput = new ScannerInput();
+        OnlineShop onlineShop = new OnlineShop(productWarehouse, printCatalogueFormatter, scannerInput);
         DecideNextSteps decideNextSteps = new DecideNextSteps();
         onlineShop.showProducts();
         decideNextSteps.decideProductsToExplore();

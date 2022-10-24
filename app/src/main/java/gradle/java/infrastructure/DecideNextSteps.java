@@ -4,11 +4,11 @@ import gradle.java.domain.Product;
 
 public class DecideNextSteps {
   GlobalVariables globalVariables = new GlobalVariables();
-  OnlineShop onlineShop = new OnlineShop();
   ProductWarehouse productWarehouse = new ProductWarehouse();
   PrintCatalogueFormatter printCatalogueFormatter = new PrintCatalogueFormatter();
   ScannerInput scannerInput = new ScannerInput();
   Println println = new Println();
+  OnlineShop onlineShop = new OnlineShop(productWarehouse, printCatalogueFormatter, scannerInput);
   public void decideProductsToExplore(){
       println.printlnDecideProductsToExplore();
   }
