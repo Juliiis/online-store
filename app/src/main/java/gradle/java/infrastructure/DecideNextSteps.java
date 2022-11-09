@@ -1,14 +1,14 @@
 package gradle.java.infrastructure;
 
 import gradle.java.domain.Product;
-import gradle.java.infrastructure.interfaces.Cli;
+import gradle.java.infrastructure.interfaces.CliInterface;
 
 public class DecideNextSteps {
   GlobalVariables globalVariables = new GlobalVariables();
   ProductWarehouse productWarehouse = new ProductWarehouse();
   PrintCatalogueFormatter printCatalogueFormatter = new PrintCatalogueFormatter();
   Println println = new Println();
-  Cli cli = new Cli();
+  CliInterface cli = new CliInterface();
   OnlineShop onlineShop = new OnlineShop(productWarehouse, printCatalogueFormatter, cli);
   public void decideProductsToExplore(){
       println.printlnDecideProductsToExplore();

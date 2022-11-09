@@ -9,7 +9,7 @@ import gradle.java.domain.Product;
 import gradle.java.infrastructure.OnlineShop;
 import gradle.java.infrastructure.PrintCatalogueFormatter;
 import gradle.java.infrastructure.ProductWarehouse;
-import gradle.java.infrastructure.interfaces.Cli;
+import gradle.java.infrastructure.interfaces.CliInterface;
 import java.util.ArrayList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,7 +21,7 @@ import org.mockito.MockitoAnnotations;
 public class OnlineShopTest {
   private final ProductWarehouse productWarehouse = mock(ProductWarehouse.class);
   private final PrintCatalogueFormatter printCatalogueFormatter = mock(PrintCatalogueFormatter.class);
-  private final Cli cli = mock(Cli.class);
+  private final CliInterface cli = mock(CliInterface.class);
   private final OnlineShop onlineShop = new OnlineShop(productWarehouse, printCatalogueFormatter, cli);
 
   @BeforeEach

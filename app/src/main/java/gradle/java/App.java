@@ -7,13 +7,13 @@ import gradle.java.infrastructure.DecideNextSteps;
 import gradle.java.infrastructure.OnlineShop;
 import gradle.java.infrastructure.PrintCatalogueFormatter;
 import gradle.java.infrastructure.ProductWarehouse;
-import gradle.java.infrastructure.interfaces.Cli;
+import gradle.java.infrastructure.interfaces.CliInterface;
 
 public class App {
     public static void main(String[] args) {
         ProductWarehouse productWarehouse = new ProductWarehouse();
         PrintCatalogueFormatter printCatalogueFormatter = new PrintCatalogueFormatter();
-        Cli cli = new Cli();
+        CliInterface cli = new CliInterface();
         OnlineShop onlineShop = new OnlineShop(productWarehouse, printCatalogueFormatter, cli);
         DecideNextSteps decideNextSteps = new DecideNextSteps();
         onlineShop.showProducts();

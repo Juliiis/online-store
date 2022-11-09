@@ -3,7 +3,7 @@ package gradle.java.infrastructure.interfaces;
 import gradle.java.domain.UserInterface;
 import java.util.Scanner;
 
-public class Cli implements UserInterface {
+public class CliInterface implements UserInterface {
 
   @Override
   public void sendMessage(String message) {
