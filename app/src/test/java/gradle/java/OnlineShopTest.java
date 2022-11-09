@@ -21,8 +21,8 @@ import org.mockito.MockitoAnnotations;
 public class OnlineShopTest {
   private final ProductWarehouse productWarehouse = mock(ProductWarehouse.class);
   private final PrintCatalogueFormatter printCatalogueFormatter = mock(PrintCatalogueFormatter.class);
-  private final CliInterface cli = mock(CliInterface.class);
-  private final OnlineShop onlineShop = new OnlineShop(productWarehouse, printCatalogueFormatter, cli);
+  private final CliInterface cliInterface = mock(CliInterface.class);
+  private final OnlineShop onlineShop = new OnlineShop(productWarehouse, printCatalogueFormatter, cliInterface);
 
   @BeforeEach
   void setUp() {
@@ -48,7 +48,7 @@ public class OnlineShopTest {
   public void showProductByReferenceTest(){
     Product product = GeneralCatalogue.OneProduct;
 
-    when(cli.getInputFromUser()).thenReturn("W2C");
+    when(cliInterface.getInputFromUser()).thenReturn("W2C");
     when(productWarehouse.findProductByReference("W2C")).thenReturn(product);
     onlineShop.showProductByReference();
 

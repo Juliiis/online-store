@@ -7,12 +7,12 @@ import java.util.ArrayList;
 public class OnlineShop {
     private final ProductWarehouse productWarehouse;
     private final PrintCatalogueFormatter printCatalogueFormatter;
-    private final CliInterface cli;
+    private final CliInterface cliInterface;
 
     public OnlineShop(ProductWarehouse productWarehouse, PrintCatalogueFormatter printCatalogueFormatter, CliInterface cli) {
         this.productWarehouse = productWarehouse;
         this.printCatalogueFormatter = printCatalogueFormatter;
-        this.cli = cli;
+        this.cliInterface = cli;
     }
 
     public void showProducts() {
@@ -20,7 +20,7 @@ public class OnlineShop {
         printCatalogueFormatter.printCatalogueAllProducts(catalogue);
     }
     public void showProductByReference(){
-        String inputClient = cli.getInputFromUser();
+        String inputClient = cliInterface.getInputFromUser();
         Product product = productWarehouse.findProductByReference(inputClient);
         printCatalogueFormatter.printOneProductByReference(product);
     }

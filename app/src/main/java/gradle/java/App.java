@@ -13,8 +13,8 @@ public class App {
     public static void main(String[] args) {
         ProductWarehouse productWarehouse = new ProductWarehouse();
         PrintCatalogueFormatter printCatalogueFormatter = new PrintCatalogueFormatter();
-        CliInterface cli = new CliInterface();
-        OnlineShop onlineShop = new OnlineShop(productWarehouse, printCatalogueFormatter, cli);
+        CliInterface cliInterface = new CliInterface();
+        OnlineShop onlineShop = new OnlineShop(productWarehouse, printCatalogueFormatter, cliInterface);
         DecideNextSteps decideNextSteps = new DecideNextSteps();
         onlineShop.showProducts();
         decideNextSteps.decideProductsToExplore();
