@@ -2,7 +2,7 @@ package gradle.java.infrastructure.interfaces;
 
 import gradle.java.domain.UserInterface;
 
-public class Http implements UserInterface {
+public class HttpInterface implements UserInterface {
 
   @Override
   public void sendMessage(String message) {
